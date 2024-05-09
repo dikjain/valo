@@ -22,6 +22,15 @@
         rotate: 3deg;
     }
 }
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes ban-cc {
     from{
         background-color:#ff4753 ;
@@ -50,6 +59,7 @@
 
     text-decoration: none;
 }
+
 body::-webkit-scrollbar {
     display: none;
     position: absolute;
@@ -131,6 +141,7 @@ nav{
     width: 80vw;
     background-color: #ff4753;
     display: flex;
+    border-radius: 8%;
 }
 #in-1a{
     height: 100%;
@@ -388,12 +399,88 @@ nav{
 #pg-3{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    display: flex;
 }
+#ost{
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 10vw;
+    background-color: black;
+    color: white;
+    background-color: #ff4753;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px black;
+}
+#scont{
+    height: 100%;
+    width: 90vw;
+    
+}
+#sctop,#sctbt{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.social{
+    height: 24vw;
+    width: 18vw;
+    margin: 20px;
+    border-radius: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.social::before{
+    content: '';
+    position: absolute;
+    width: 330%;
+    height:  330%;
+    background-image: conic-gradient(transparent,transparent,transparent,#ff4753);
+    animation: rot 4s linear infinite;
+    z-index: 0;
+
+}
+.social::after{
+    content: '';
+    position: absolute;
+    width: 270%;
+    height:  270%;
+    background-image: conic-gradient(transparent,transparent,transparent,white);
+    animation: rot 4s linear infinite;
+    animation-delay: -2s;
+    z-index: 0;
+}
+#socin{
+    width: 98%;
+    height: 98%;
+    background-color: black;
+    position: relative;
+    z-index: 5;
+    border-radius: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#socin img{
+    width: 48%;
+    -webkit-filter: drop-shadow(1px 1px 2px white);
+}
+
 #ag_pg_1{
     height: 640vh;
     width: 100vw;
-    background-image: radial-gradient(#ff4753,black)
+    background-image: linear-gradient(270deg,transparent,#ff4753,transparent);
 
 }
 #space{
@@ -574,6 +661,8 @@ nav{
     width: 75%;
     -webkit-filter: drop-shadow(3px 3px 8px white);
     transition: ease-in-out all 0.15s;
+    position: relative;
+    left: 50px;
 }
 #gun1 img,#gun3 img{
     width: 65%;
@@ -582,8 +671,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    transform:translateY(95px);
+    position: relative; 
     height: 20px;
     width: 120px;
     border-radius: 20%/40%;
@@ -591,6 +679,9 @@ nav{
     border: white 1px solid;
     color: white;
     cursor: pointer;
+    top: 170px;
+    left: -250px;
+    transition: all ease-in-out 0.3s;
 }
 #gundet{
     top: 20%;
@@ -603,7 +694,8 @@ nav{
     border: 2.5px #ff4753 solid;
     border-radius: 8%/8%;
     display: none;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    overflow: hidden;
 }
 .material-symbols-outlined{
     color: white;
@@ -625,11 +717,19 @@ nav{
     justify-content: center;
     color: white;
     font-size: 20px;
-    -webkit-filter: drop-shadow(2px 2px 2px black);   
+    -webkit-filter: drop-shadow(2px 2px 2px black); 
+    transition: ease-in-out all 0.3s;
+    opacity: 0;
+    max-height: 250px;
+  
 }
 .wp-block-table table,.wp-block-table th,.wp-block-table td{
     border: 2px white solid;
     -webkit-filter: drop-shadow(2px 2px 2px black);
+}
+#gundet_cut{
+    transition: ease-in-out all 0.15s;
+    opacity: 0;
 }
 #gundetbot{
     display: flex;
@@ -638,6 +738,8 @@ nav{
     height: 400px;
     position: relative;
     top: 80px;
+    transition: ease-in-out all 0.3s;
+    opacity: 0;
 }
 #datlist{
     position: relative;
@@ -670,4 +772,58 @@ nav{
     z-index: 30;
     mix-blend-mode: difference;
     display: none;
+}
+.sclbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    height: 40px;
+    width: 145px;
+    border: 1px solid white;
+    position: absolute;
+    color: black;
+    transform: translateY(140px) translateX(-250px);
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+    font-family: fantasy;
+    text-shadow: 1px 1px 2px white;
+}
+.sclbtn a{
+    text-decoration: none;
+    color: black;
+}
+.sclbtn a:visited{
+    color: black;
+}
+.social:hover{
+    .sclbtn{
+        transition: all ease-out 0.2s;
+        transform: translateY(140px) translateX(0px);
+
+    }
+}
+#sclbtn1{
+    background-color: red;
+}
+#sclbtn2{
+    background-color: #1877F2;
+}
+#sclbtn3 a{
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 2px black;   
+}
+#sclbtn4{
+    background-color: #7289da;
+    
+}
+#sclbtn5{
+    background-color: #C13584;
+    
+}
+#sclbtn6{
+    background-color: black;
+    background-image: linear-gradient(65deg,#00f2ea,#ff0050);
+    
 }

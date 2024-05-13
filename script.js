@@ -16,6 +16,65 @@ let sld = document.querySelectorAll(".gnslid");
 let socin = document.querySelectorAll("#socin");
 let social = document.querySelectorAll(".social");
 let tplist = document.querySelectorAll("#gtlist");
+let frwd = document.querySelectorAll("#fimg");
+let bckd = document.querySelectorAll("#fbck");
+
+var m = 1
+frwd[0].addEventListener("click",function(){
+    if(m<=5){
+        sld[0].childNodes[m].style.width = "10px";
+        setTimeout(function(){
+            sld[0].childNodes[m].style.display = "none";
+            m += 2;
+            if(m==3){
+                sld[0].style.maxWidth = "120.05%";
+            }
+            if(m==5){
+                sld[0].style.maxWidth = "100%";
+            }
+        },200)
+
+    }
+})
+bckd[0].addEventListener("click",function(){
+    if(m>=1){
+        if(m==3){
+            sld[0].style.maxWidth = "150.05%";
+        }
+        if(m==5){
+            sld[0].style.maxWidth = "120.05%";
+        }
+        sld[0].childNodes[m-2].style.display = "flex";
+        setTimeout(function(){
+            sld[0].childNodes[m-2].style.width = "30vw";
+            m -= 2;
+        },10);
+    }
+})
+frwd[1].addEventListener("click",function(){
+    if(m<=1){
+        sld[3].childNodes[m].style.width = "10px";
+        setTimeout(function(){
+            sld[3].childNodes[m].style.display = "none";
+            m += 2;
+            if(m==1){
+                sld[3].style.maxWidth = "100%";
+            }
+        },200)
+    }
+})
+bckd[1].addEventListener("click",function(){
+        if(m==1){
+            sld[3].style.maxWidth = "120.05%";
+        }
+        sld[3].childNodes[m-2].style.display = "flex";
+        setTimeout(function(){
+            sld[3].childNodes[m-2].style.width = "30vw";
+            m -= 2;
+        },10);
+
+    })
+
 
 setTimeout(function(){
     chtd.style.display = "none";
@@ -57,7 +116,6 @@ tplist.forEach(lit=>{
     var io;
     function strt(){
         if (n <= (sld[io].childElementCount * 2)) {
-            console.log(sld[io])
             sld[io].childNodes[n].style.opacity = "1";
             sld[io].childNodes[n].style.height = "110%";
             sld[io].childNodes[n].style.boxShadow = "0px 0px 30px red";

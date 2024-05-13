@@ -55,22 +55,25 @@
     overflow-y: hidden;
 }
 .gnslid{
+    width: 100%;
     height: 70%;
     display: flex;
     align-items: center;
     margin-left: 0.05%;
+    position: relative;
+    scroll-behavior: smooth;
 }
 .guns{
     height: 100%;
     border: 2px solid #ff4753;
     border-radius: 5%;
-    width: 30vw;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: 0.2s all ease-in-out;
     box-shadow: none;
+    max-width: 30vw;
 }
 
 .guns img{
@@ -117,4 +120,32 @@
     border-radius: 10%/100%;
     border: 2px solid red;
     box-shadow: 0px 0px 40px red;
+}
+#fimg{
+    position: relative;
+    cursor: pointer;
+    left: 90vw;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px white inset;
+    box-shadow: 1px 1px 5px white;
+    top: 30px;
+    z-index: 40;
+}
+#fbck{
+    position: relative;
+    cursor: pointer;
+    left: 83vw;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px white inset;
+    box-shadow: 1px 1px 5px white;
+    top: 30px;
+    z-index: 40;
+}
+.namtop,#gnslid1{
+    position: relative;
+    top: -50px;
 }

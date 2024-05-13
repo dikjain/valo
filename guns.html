@@ -7,6 +7,12 @@
     <title>Valorant Project by Dikshit</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trial.css">
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,65 +46,111 @@
         </nav>
         <hr>
         <div id="pg-1_3">
-            <div id="gun1" class="guns"><img src="ASSETS\Classic.webp">
-                <div onclick="display.value = 1" id="clickhere" class="clickhere">Get Details</div>
+            <div id="guntyp">
+                <div id="chtd">Click To Reveal The Guns</div>
+                <ul>
+                    <li id = gtlist value="1" class="gtl" id="gtl1"><a href="guns.html#sa">Sidearms</a></li>
+                    <li id = gtlist value="2" class="gtl" id="gtl2"><a href="guns.html#smg">SMGs</a></li>
+                    <li id = gtlist value="3" class="gtl" id="gtl3"><a href="guns.html#sg">Shotguns</a></li>
+                    <li id = gtlist value="4" class="gtl" id="gtl4"><a href="guns.html#asr">Rifles</a></li>
+                    <li id = gtlist value="5" class="gtl" id="gtl5"><a href="guns.html#rif">Sniper Rifles</a></li>
+                    <li id = gtlist value="6" class="gtl" id="gtl6"><a href="guns.html#mg">Machine Guns</a></li>
+                    <li id = gtlist value="7" class="gtl" id="gtl7"><a href="guns.html#mel">Melee</a></li>
+                </ul>
             </div>
-            <div id="gun2" class="guns"><img src="ASSETS\Shorty.webp">
-                <div onclick="display.value = 2" id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun3" class="guns"><img src="ASSETS\Frenzy.webp">
-                <div onclick="display.value = 3" id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun4" class="guns"><img src="ASSETS\Ghost.webp">
-                <div  onclick="display.value = 4" id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun5" class="guns"><img src="ASSETS\Sheriff.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun6" class="guns"><img src="ASSETS\Stinger.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun7" class="guns"><img src="ASSETS\Spectre.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun8" class="guns"><img src="ASSETS\Bucky.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun9" class="guns"><img src="ASSETS\Judge.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun10" class="guns"><img src="ASSETS\Bulldog.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun11" class="guns"><img src="ASSETS\Guardian.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun12" class="guns"><img src="ASSETS\Phantom.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun13" class="guns"><img src="ASSETS\Vandal.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun14" class="guns"><img src="ASSETS\Marshal.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun15" class="guns"><img src="ASSETS\Outlaw.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun16" class="guns"><img src="ASSETS\Operator.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun17" class="guns"><img src="ASSETS\Ares.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun18" class="guns"><img src="ASSETS\Odin.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
-            <div id="gun19" class="guns"><img src="ASSETS\Melee.webp">
-                <div id="clickhere" class="clickhere">Get Details</div>
-            </div>
+            <div class="gns" id="sa">
+                <div id="gntop">Sidearms</div>
+                <div class="gnslid" style="width: 150.05%;">
+                    <div id="gun1" class="guns"><img src="ASSETS\Classic.webp">
+                        <div onclick="display.value = 1" id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun2" class="guns"><img src="ASSETS\Shorty.webp">
+                        <div onclick="display.value = 2" id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun3" class="guns"><img src="ASSETS\Frenzy.webp">
+                        <div onclick="display.value = 3" id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun4" class="guns"><img src="ASSETS\Ghost.webp">
+                        <div  onclick="display.value = 4" id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun5" class="guns"><img src="ASSETS\Sheriff.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
+            <div class="gns" id="smg">
+                <div id="gntop">SMGs</div>
+                <div class="gnslid">
+                    <div id="gun6" class="guns"><img src="ASSETS\Stinger.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun7" class="guns"><img src="ASSETS\Spectre.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
+            <div class="gns" id="sg">
+                <div id="gntop">ShotGuns</div>
+                <div class="gnslid">
+                    <div id="gun8" class="guns"><img src="ASSETS\Bucky.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun9" class="guns"><img src="ASSETS\Judge.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
+            <div class="gns" id="asr">
+                <div id="gntop">Assault-Rifles</div>
+                <div class="gnslid" style="width: 120.05%;">
+                    <div id="gun10" class="guns"><img src="ASSETS\Bulldog.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun11" class="guns"><img src="ASSETS\Guardian.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun12" class="guns"><img src="ASSETS\Phantom.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun13" class="guns"><img src="ASSETS\Vandal.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
+            <div class="gns" id="rif">
+                <div id="gntop">Snipers</div>
+                <div class="gnslid">
+                    <div id="gun14" class="guns"><img src="ASSETS\Marshal.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun15" class="guns"><img src="ASSETS\Outlaw.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun16" class="guns"><img src="ASSETS\Operator.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
+            <div class="gns" id="mg">
+                <div id="gntop">MachineGuns</div>
+                <div class="gnslid">
+                    <div id="gun17" class="guns"><img src="ASSETS\Ares.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                    <div id="gun18" class="guns"><img src="ASSETS\Odin.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
+            <div class="gns" id="mel">
+                <div id="gntop">Melee</div>
+                <div class="gnslid">
+                    <div id="gun19" class="guns"><img src="ASSETS\Melee.webp">
+                        <div id="clickhere" class="clickhere">Get Details</div>
+                    </div>
+                </div>
+            </div>    
         </div>
-    </div>
     <script src="script.js"></script>
 </body>
 

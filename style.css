@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital@0;1&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Chakra+Petch&family=Righteous&family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Righteous&display=swap');
 @keyframes valogshift {
     from{
@@ -11,6 +12,18 @@
 
     }
 
+}
+@keyframes ktg{
+    0%{
+        width: 0;
+        transition: 1s ease-out;
+        filter: drop-shadow(0px 0px 0px white);
+    }
+    100%{
+        width: 22%;
+        transition: 1s ease-out;
+        filter: drop-shadow(0px 0px 10px white);
+    }
 }
 @keyframes jettdance {
     from{
@@ -159,7 +172,6 @@ nav{
 
 #b1-t{
     color: white;
-    text-shadow: black 0.08VW 0.08vw;
     font-size: 1.1vw;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
@@ -173,8 +185,6 @@ nav{
 }
 #b1-m{
     animation: text-cc 2s ease-in-out  infinite alternate-reverse;
-    color: white;
-    text-shadow: black 0.15VW 0.15vw;
     font-weight: 800;
     font-size: 6vw;
     height: 30%;
@@ -230,13 +240,14 @@ nav{
     width: 50%;
     border: 2px #ff4753 inset;
     transition: ease-in-out 0.3s;
-
+    border-bottom: none;
     
 }
 #in-2R{
     opacity: 0.25;
     border: 2px #ff4753 inset;
     height: 100%;
+    border-bottom: none;
     width: 50%;
     transition: ease-in-out 0.3s;
     overflow: hidden;
@@ -245,13 +256,13 @@ nav{
 #in-2L:hover{
     opacity: 1;
     width: 95%;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.3s;
     
 }
 #in-2R:hover{
     opacity: 1;
     width: 95%;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.3s;
 }
 #valog{
     z-index: 2;
@@ -263,21 +274,42 @@ nav{
 }
 
 #in-2T{
-    text-shadow: 2px 2px white;
+    /* text-shadow: 2px 2px 2px white; */
     cursor: default;
     z-index: 6;
-    font-family: "Archivo", sans-serif;
+    font-family: "Acme", sans-serif;
     font-weight: 800;
-    font-style: italic;
-    text-decoration: underline;
+    letter-spacing: 10px;
     width: 100vw;
     height: 20vh;
-    background-color: #ff4753;
+    background-image: linear-gradient(to right,black,#ff4753,#ff4753,black);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5vw;
+    font-size: 6vw;
+    text-shadow: 1px 1px 1px white;
 }
+h1{
+    -webkit-text-stroke: white 0.1px;
+    color: transparent;
+    margin-left: 20px;
+    transition: 1s ease-out;
+    text-shadow: 1px 1px 1px transparent;
+    font-size: 8vw;
+}
+h1::before{
+    animation: ktg infinite 4.5s ease-in-out alternate;
+    content: "GAME";
+    overflow: hidden;
+    width: 0%;
+    /* height: 100 */
+    position: absolute;
+    color: white;
+    transition: 1s ease-out;
+    text-shadow: 1px 1px 1px black;
+}
+
+
 #in-2m{
     width: 100vw;
     height: 80vh;
@@ -334,7 +366,7 @@ nav{
     opacity: 0.25;
 }
 .map-pics:hover{
-    box-shadow: 0.2vw 0.2vw 14px #ff4753;
+    box-shadow: 0vw 0vw 14px #ff4753;
     transition: ease-in-out 0.3s;
     opacity: 1;
 }
@@ -400,6 +432,7 @@ nav{
     width: 100vw;
     height: 100vh;
     display: flex;
+    /* background-color: green; */
 }
 #ost{
     text-orientation: upright;
@@ -413,13 +446,14 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 70px;
+    font-size: 7vh;
     font-weight: 600;
     text-shadow: 2px 2px 2px black;
 }
 #scont{
     height: 100%;
     width: 90vw;
+    background-color: rgba(255, 255, 255, 0.1);
     
 }
 #sctop,#sctbt{
@@ -439,15 +473,18 @@ nav{
     justify-content: center;
     overflow: hidden;
     position: relative;
+    background-image: conic-gradient(transparent,transparent,transparent,--clr);
+
 }
 .social::before{
     content: '';
     position: absolute;
     width: 330%;
     height:  330%;
-    background-image: conic-gradient(transparent,transparent,transparent,#ff4753);
+    background-image: conic-gradient(transparent,transparent,transparent,white);
     animation: rot 4s linear infinite;
     z-index: 0;
+
 
 }
 .social::after{
@@ -459,7 +496,13 @@ nav{
     animation: rot 4s linear infinite;
     animation-delay: -2s;
     z-index: 0;
+
 }
+.social:hover::before,.social:hover::after{
+    background: conic-gradient(transparent,transparent,transparent,var(--clr));
+}
+
+
 #socin{
     width: 98%;
     height: 98%;
@@ -473,8 +516,12 @@ nav{
 
 }
 #socin img{
+    transition: all ease-out 0.2s;
     width: 48%;
-    -webkit-filter: drop-shadow(1px 1px 2px white);
+    -webkit-filter: drop-shadow(0px 0px 2px white);
+    position: relative;
+    top: 0;
+
 }
 
 #ag_pg_1{
@@ -496,7 +543,7 @@ nav{
     width: 75%;
     display: flex;
     background-color: #ff4753;
-    box-shadow: 8px 8px 8px white;
+    box-shadow: 8px 8px 40px black;
     border: 3px solid white;
     margin-top: 20px;
     position: relative;
@@ -514,7 +561,7 @@ nav{
     justify-content: center;
     width: 100%;
     color: black;
-    text-shadow: 5px 5px 5px white;
+    text-shadow: 3px 3px 5px white;
 
 }
 .charsimg{
@@ -650,11 +697,11 @@ nav{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    
 }
 .guns:hover{
     img{
         -webkit-filter: drop-shadow(3px 3px 8px #ff4753);
-        transition: ease-in-out all 0.15s;
     }
 }
 .guns img{
@@ -673,7 +720,7 @@ nav{
     justify-content: center;
     position: relative; 
     height: 20px;
-    width: 120px;
+    min-width: 120px;
     border-radius: 20%/40%;
     background-color: #ff4753;
     border: white 1px solid;
@@ -778,52 +825,40 @@ nav{
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    height: 40px;
-    width: 145px;
-    border: 1px solid white;
+    height: 50px;
+    width: 155px;
+    /* border: 1px solid white; */
     position: absolute;
     color: black;
     transform: translateY(140px) translateX(-250px);
     cursor: pointer;
     transition: all ease-out 0.2s;
     font-family: fantasy;
-    text-shadow: 1px 1px 2px white;
+    border-radius: 15%/20%;
+    opacity: 0; 
+    
+
 }
 .sclbtn a{
     text-decoration: none;
-    color: black;
+    color: var(--clr);
 }
 .sclbtn a:visited{
-    color: black;
+    color: var(--clr);
+}
+.sclbtn:hover{
+    letter-spacing: 1px;
 }
 .social:hover{
     .sclbtn{
+        border: 0.001vh solid var(--clr);
+        opacity: 1;
+        box-shadow: 1px 1px 50px var(--clr);
         transition: all ease-out 0.2s;
         transform: translateY(140px) translateX(0px);
-
     }
-}
-#sclbtn1{
-    background-color: red;
-}
-#sclbtn2{
-    background-color: #1877F2;
-}
-#sclbtn3 a{
-    background-color: black;
-    color: white;
-    text-shadow: 1px 1px 2px black;   
-}
-#sclbtn4{
-    background-color: #7289da;
-    
-}
-#sclbtn5{
-    background-color: #C13584;
-    
-}
-#sclbtn6{
-    background-color: black;
-    background-image: linear-gradient(65deg,#00f2ea,#ff0050);
-    
+    #socin img{
+        top: -20px;
+        transition: all ease-out 0.2s;
+    }
 }

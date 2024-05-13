@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Righteous&family=Syne:wght@400..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.gns::-webkit-scrollbar{
+    display: none;
+}
+#pg-1_3::-webkit-scrollbar{
+    display: none;
+}
+#pg-1_3{
+    width: 100vw;
+    height: calc(90vh - 2px);
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    
+}
+#guntyp ul{
+    display: flex;
+    width: 100vw;
+    height: 12vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#guntyp ul li {
+    list-style: none;
+}
+
+#guntyp ul li a{
+    font-size: 40px;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Syne", sans-serif;
+    font-weight: 650;
+    transition: 0.15s all ease-in-out;
+}
+#guntyp ul li a:hover{
+    color: #ff4753;
+    -webkit-text-stroke: #ff4753 1px;
+    text-shadow: 0px 0px 30px #ff4753;
+    transition: 0.15s all ease-in-out;
+}
+.gns{
+    width: 100%;
+    height: 45vh;
+    margin: 20px 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.gnslid{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    margin-left: 0.05%;
+}
+.guns{
+    height: 100%;
+    border: 2px solid #ff4753;
+    border-radius: 5%;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.2s all ease-in-out;
+    box-shadow: none;
+}
+
+.guns img{
+    width: 30vw;
+}
+#gun1 img,#gun3 img{
+    width: 23vw;
+}
+
+#gntop{
+    display: flex;
+    align-items: end;
+    height: 25%;
+    font-size: 95px;
+    font-family: fantasy;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+#guntyp{
+    overflow: hidden;
+}
+@keyframes mov {
+    from{
+        left: 0vw;
+    }
+    to{
+        left: 100vw;
+    }
+}
+#chtd{
+    font-family: monospace;
+    font-weight: 700;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff4753;
+    text-shadow: 2px 2px 5px black;
+    font-size: 100px;
+    position: absolute;
+    height: 12vh;
+    width: 100%;
+    animation: mov ease-in 3.05s;
+    border-radius: 10%/100%;
+    border: 2px solid red;
+    box-shadow: 0px 0px 40px red;
+}

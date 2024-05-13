@@ -10,11 +10,97 @@ var imgsrc = document.getElementById("gunimg");
 let tbdat = document.querySelector("figure");
 let bcur = document.querySelector("#ballcur");
 let bcurbg = document.querySelector("body");
+let chtd = document.querySelector("#chtd");
 let gunch = document.querySelectorAll(".guns");
+let sld = document.querySelectorAll(".gnslid");
 let socin = document.querySelectorAll("#socin");
+let social = document.querySelectorAll(".social");
+let tplist = document.querySelectorAll("#gtlist");
+
+setTimeout(function(){
+    chtd.style.display = "none";
+
+},3000)
+
+
+tplist.forEach(lit=>{
+    lit.addEventListener("click",function(){
+        switch(lit.value){
+            case 1:
+                bhaalu(0);
+                break
+            case 2:
+                bhaalu(1);
+                break
+                case 3:
+                    bhaalu(2);
+                    break
+                    case 4:
+                        bhaalu(3);
+                break
+                case 5:
+                    bhaalu(4);
+                break
+                case 6:
+                    bhaalu(5);
+                    break
+                    case 7:
+                        bhaalu(6);
+                        break
+                    }
+                })
+            })
+            
+            function bhaalu(io) {
+    let n = 1;
+    let b = 1;
+    var io;
+    function strt(){
+        if (n <= (sld[io].childElementCount * 2)) {
+            console.log(sld[io])
+            sld[io].childNodes[n].style.opacity = "1";
+            sld[io].childNodes[n].style.height = "110%";
+            sld[io].childNodes[n].style.boxShadow = "0px 0px 30px red";
+            sld[io].childNodes[n].childNodes[0].setAttribute("style","-webkit-filter: drop-shadow(3px 3px 8px red)");
+            sld[io].childNodes[n].childNodes[2].style.top = "190px";
+            n += 2;
+            
+        }
+    }
+    setInterval(strt, 500)
+    setInterval(function () {
+        setTimeout(function () {
+            if (b <= sld[io].childElementCount * 2) {
+                sld[io].childNodes[b].childNodes[0].setAttribute("style","-webkit-filter: drop-shadow(3px 3px 8px white);");
+                sld[io].childNodes[b].style.boxShadow = "none";
+                sld[io].childNodes[b].style.opacity = "0.4";
+                sld[io].childNodes[b].style.height = "100%";
+                b += 2;
+            }
+        }, 500)
+    }, 500);
+
+}
 
 
 
+gunch.forEach(itm =>{
+    itm.addEventListener("mousemove",function(){
+        itm.style.opacity = "1"
+        itm.style.height = "110%";
+        itm.style.boxShadow = "0px 0px 30px red";
+        itm.childNodes[0].setAttribute("style","-webkit-filter: drop-shadow(3px 3px 8px red)");
+
+    })
+    itm.addEventListener("mouseleave",function(){
+        itm.style.opacity = "0.4";
+        itm.childNodes[0].setAttribute("style","-webkit-filter: drop-shadow(3px 3px 8px white);");
+        itm.style.boxShadow = "none";
+        itm.style.opacity = "0.4";
+        itm.style.height = "100%";
+        
+})
+})
 bcurbg.addEventListener("mousemove",function(dets){
     bcur.style.left = dets.pageX + "px";
     bcur.style.top = dets.pageY + "px";
@@ -26,7 +112,7 @@ bcurbg.addEventListener("mousemove",function(dets){
 gunch.forEach(k =>{
     k.addEventListener("mouseenter",function(){
         k.childNodes[2].style.top = "90px";
-     
+        
         
     })
     k.addEventListener("mouseleave",function(){
@@ -140,7 +226,7 @@ ch.forEach(e =>{
                 dat.childNodes[1].style.opacity="0";
                 dat.childNodes[3].style.opacity="0";
                 dat.childNodes[5].style.opacity="0";
-
+                
             },100)            
         })    
     })
@@ -154,3 +240,31 @@ function work(b){
         
     },b)
 }
+// function bhaalu(){
+//     sld.forEach(o=>{
+//         let n = 1;
+//         let b = 1;
+//         setInterval(function(){
+//             if (n <= (o.childElementCount*2)){
+//                 o.childNodes[n].style.opacity = "1";
+//                 o.childNodes[n].style.height = "110%";
+//                 n += 2;
+                
+//             }else{
+//                 n =1;
+//             }
+//         },1000)
+//         setInterval(function(){
+//             setTimeout(function(){
+//             if (b <= o.childElementCount*2){
+//                 o.childNodes[b].style.opacity = "0.4";
+//                 o.childNodes[b].style.height = "100%";
+//                 b += 2;
+//             }else{
+//                 b =1;
+//             }
+//             },1000)
+//         },1000);
+//     })
+
+// }

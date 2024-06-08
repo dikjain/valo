@@ -1,0 +1,50 @@
+@media screen and  (max-width : 1095px) {
+    #jettfr{
+        top: 0px;
+        height: 100%;
+        left: -50px;
+    }
+    #in-2m{
+        flex-wrap: wrap;
+        height: 92vh;
+    }
+    #in-2L,#in-2R{
+        width: 100%;
+        height: 46vh;
+        opacity: 1;
+    }
+    #l2-a,#r2-a{
+        height: 10%;
+        font-size: 40PX;
+    }
+    #in-2T{
+        height: 8vh;
+    }
+    #valog{
+        height: 13vh;
+        top: 95.3vh;
+    }
+    .map-pics{
+        height: 90%;
+    }
+    #in-2R:hover,#in-2L:hover{
+        width: 100%;
+    }
+    #agentsbut{
+        font-size: 30px;
+        position: relative;
+    }
+    .char-img{
+        height: 125%;
+    }
+    #b-2-b{
+        position: relative;
+    }
+    .social{
+        height: 40vh;
+        width: 25vw;
+    }
+    #sctop,#sctbt{
+        flex-wrap: wrap;
+    }
+}

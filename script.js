@@ -18,6 +18,43 @@ let social = document.querySelectorAll(".social");
 let tplist = document.querySelectorAll("#gtlist");
 let frwd = document.querySelectorAll("#fimg");
 let bckd = document.querySelectorAll("#fbck");
+let imggs = document.querySelector("#jettfr");
+
+setTimeout(function(){
+    imggs.style.left = "-750px";
+},4500)
+setTimeout(function(){
+    imggs.style.left = "-750px";
+},9500)
+setTimeout(function(){
+    imggs.style.left = "-750px";
+},14000)
+setTimeout(function(){
+    imggs.style.left = "-750px";
+},19500)
+setTimeout(function(){
+    imggs.src = "ASSETS\\PHNX.png"
+    imggs.style.left = "100px";
+},5000)
+setTimeout(function(){
+    imggs.src = "ASSETS\\VP.png"
+    imggs.style.left = "100px";
+},10000)
+setTimeout(function(){
+    imggs.src = "ASSETS\\cypher.png"
+    imggs.style.left = "100px";
+},15000)
+setTimeout(function(){
+    imggs.src = "ASSETS\\jett.png"
+    imggs.style.left = "0px";
+},20000)
+
+bcurbg.addEventListener("mousemove",function(dets){
+    bcur.style.left = dets.pageX + "px";
+    bcur.style.top = dets.pageY + "px";
+    bcur.style.display = "block";
+    bcurbg.style.cursor = "none"
+})
 
 var m = 1
 frwd[0].addEventListener("click",function(){
@@ -108,9 +145,9 @@ tplist.forEach(lit=>{
                         break
                     }
                 })
-            })
+    })
             
-            function bhaalu(io) {
+    function bhaalu(io) {
     let n = 1;
     let b = 1;
     var io;
@@ -145,7 +182,7 @@ tplist.forEach(lit=>{
 gunch.forEach(itm =>{
     itm.addEventListener("mousemove",function(){
         itm.style.opacity = "1"
-        itm.style.height = "110%";
+        itm.style.height = "100%";
         itm.style.boxShadow = "0px 0px 30px red";
         itm.childNodes[0].setAttribute("style","-webkit-filter: drop-shadow(3px 3px 8px red)");
 
@@ -155,16 +192,9 @@ gunch.forEach(itm =>{
         itm.childNodes[0].setAttribute("style","-webkit-filter: drop-shadow(3px 3px 8px white);");
         itm.style.boxShadow = "none";
         itm.style.opacity = "0.4";
-        itm.style.height = "100%";
+        itm.style.height = "97%";
         
 })
-})
-bcurbg.addEventListener("mousemove",function(dets){
-    bcur.style.left = dets.pageX + "px";
-    bcur.style.top = dets.pageY + "px";
-    bcur.style.display = "block";
-    bcurbg.style.cursor = "none"
-    
 })
 
 gunch.forEach(k =>{
@@ -210,12 +240,6 @@ ch.forEach(e =>{
             imgsrc.style.width = "500px";
             tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Bullets to Kill with no Shield (100 HP)</strong></td><td><strong>Bullets to Kill with Light Shield (125 HP)</strong></td><td><strong>Bullets to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 20 meters</td><td>Head</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>4</td><td>5</td><td>6</td></tr><tr><td>Leg</td><td>5</td><td>6</td><td>7</td></tr><tr><td rowspan=3><br><br>20 &#8211; 50 meters</td><td>Head</td><td>2</td><td>2</td><td>3</td></tr><tr><td>Body</td><td>5</td><td>6</td><td>8</td></tr><tr><td>Leg</td><td>6</td><td>8</td><td>9</td></tr></tbody></table></figure>";
         }
-        if(a == 5){
-            imgsrc.src = "ASSETS\\Shorty.webp";
-            gdt.innerHTML = "Shorty"
-            imgsrc.style.width = "700px";
-            tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Shells to Kill with no Shield (100 HP)</strong></td><td><strong>Shells to Kill with Light Shield (125 HP)</strong></td><td><strong>Shells to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 7 meters</td><td>Head</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Body</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Leg</td><td>1</td><td>1</td><td>1</td></tr><tr><td rowspan=3><br><br>7 &#8211; 15 meters</td><td>Head</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Leg</td><td>2</td><td>2</td><td>2</td></tr><tr><td rowspan=3><br><br>15 &#8211; 50 meters</td><td>Head</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>3</td><td>3</td><td>4</td></tr><tr><td>Leg</td><td>4</td><td>5</td><td>5</td></tr></tbody></table>";
-        }
         if(a == 4){
             imgsrc.src = "ASSETS\\Ghost.webp";
             gdt.innerHTML = "Ghost"
@@ -223,17 +247,23 @@ ch.forEach(e =>{
             datl.innerHTML = "<li>0 &#8211; 30 meters &#8211; Head (105)</li><li>0 &#8211; 30 meters &#8211; Body (30)</li><li>0 &#8211; 30 meters &#8211; Legs (25)</li><li>30 &#8211; 50 meters &#8211; Head (87)</li><li>30 &#8211; 50 meters &#8211; Body (25)</li><li>30 &#8211; 50 meters &#8211; Legs (21)</li>"
             tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Bullets to Kill with no Shield (100 HP)</strong></td><td><strong>Bullets to Kill with Light Shield (125 HP)</strong></td><td><strong>Bullets to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 30 meters</td><td>Head</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>4</td><td>5</td><td>5</td></tr><tr><td>Leg</td><td>4</td><td>5</td><td>6&nbsp;</td></tr><tr><td rowspan=3><br><br>30 &#8211; 50 meters</td><td>Head</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>4</td><td>5</td><td>6</td></tr><tr><td>Leg</td><td>5</td><td>6</td><td>8</td></tr></tbody></table>";
         }
-        if(a == 6){
-            imgsrc.src = "ASSETS\\Shorty.webp";
-            gdt.innerHTML = "Shorty"
+        if(a == 5){
+            imgsrc.src = "ASSETS\\Sheriff.webp";
+            gdt.innerHTML = "Sheriff"
             imgsrc.style.width = "700px";
-            tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Shells to Kill with no Shield (100 HP)</strong></td><td><strong>Shells to Kill with Light Shield (125 HP)</strong></td><td><strong>Shells to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 7 meters</td><td>Head</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Body</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Leg</td><td>1</td><td>1</td><td>1</td></tr><tr><td rowspan=3><br><br>7 &#8211; 15 meters</td><td>Head</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Leg</td><td>2</td><td>2</td><td>2</td></tr><tr><td rowspan=3><br><br>15 &#8211; 50 meters</td><td>Head</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>3</td><td>3</td><td>4</td></tr><tr><td>Leg</td><td>4</td><td>5</td><td>5</td></tr></tbody></table>";
+            tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Bullets to Kill with no Shield (100 HP)</strong></td><td><strong>Bullets to Kill with Light Shield (125 HP)</strong></td><td><strong>Bullets to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 30 meters</td><td>Head</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Body</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Leg</td><td>3</td><td>3</td><td>4</td></tr><tr><td rowspan=3><br><br>30 &#8211; 50 meters</td><td>Head</td><td>1</td><td>1</td><td>2</td></tr><tr><td>Body</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Leg</td><td>3</td><td>3</td><td>4</td></tr></tbody></table>";
+        }
+        if(a == 6){
+            imgsrc.src = "ASSETS\\Stinger.webp";
+            gdt.innerHTML = "Stinger"
+            imgsrc.style.width = "800px";
+            tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Bullets to Kill with no Shield (100 HP)</strong></td><td><strong>Bullets to Kill with Light Shield (125 HP)</strong></td><td><strong>Bullets to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 15 meters</td><td>Head</td><td>2</td><td>2</td><td>3</td></tr><tr><td>Body</td><td>4</td><td>5</td><td>6</td></tr><tr><td>Leg</td><td>5</td><td>6</td><td>7</td></tr><tr><td rowspan=3><br><br>15 &#8211; 50 meters</td><td>Head</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Body</td><td>5</td><td>6</td><td>7</td></tr><tr><td>Leg</td><td>6</td><td>7</td><td>8</td></tr></tbody></table>";
         }
         if(a == 7){
-            imgsrc.src = "ASSETS\\Shorty.webp";
-            gdt.innerHTML = "Shorty"
-            imgsrc.style.width = "700px";
-            tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Shells to Kill with no Shield (100 HP)</strong></td><td><strong>Shells to Kill with Light Shield (125 HP)</strong></td><td><strong>Shells to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 7 meters</td><td>Head</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Body</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Leg</td><td>1</td><td>1</td><td>1</td></tr><tr><td rowspan=3><br><br>7 &#8211; 15 meters</td><td>Head</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Leg</td><td>2</td><td>2</td><td>2</td></tr><tr><td rowspan=3><br><br>15 &#8211; 50 meters</td><td>Head</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>3</td><td>3</td><td>4</td></tr><tr><td>Leg</td><td>4</td><td>5</td><td>5</td></tr></tbody></table>";
+            imgsrc.src = "ASSETS\\Spectre.webp";
+            gdt.innerHTML = "Spectre"
+            imgsrc.style.width = "770px";
+            tbdat.innerHTML = "<table><tbody><tr><td><strong>Distance from Target</strong></td><td><strong>Body Part Hit</strong></td><td><strong>Bullets to Kill with no Shield (100 HP)</strong></td><td><strong>Bullets to Kill with Light Shield (125 HP)</strong></td><td><strong>Bullets to Kill with full Shield (150 HP)</strong></td></tr><tr><td rowspan=3><br><br>0 &#8211; 15 meters</td><td>Head</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Body</td><td>4</td><td>5</td><td>6</td></tr><tr><td>Leg</td><td>5</td><td>6</td><td>7</td></tr><tr><td rowspan=3><br><br>15 &#8211; 30 meters</td><td>Head</td><td>2</td><td>2</td><td>3</td></tr><tr><td>Body</td><td>5</td><td>6</td><td>7</td></tr><tr><td>Leg</td><td>6</td><td>7</td><td>9</td></tr><tr><td rowspan=3><br><br>30 &#8211; 50 meters</td><td>Head</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Body</td><td>5</td><td>7</td><td>8</td></tr><tr><td>Leg</td><td>6</td><td>7</td><td>9</td></tr></tbody></table>";
         }
         if(a == 8){
             imgsrc.src = "ASSETS\\Shorty.webp";
@@ -298,31 +328,3 @@ function work(b){
         
     },b)
 }
-// function bhaalu(){
-//     sld.forEach(o=>{
-//         let n = 1;
-//         let b = 1;
-//         setInterval(function(){
-//             if (n <= (o.childElementCount*2)){
-//                 o.childNodes[n].style.opacity = "1";
-//                 o.childNodes[n].style.height = "110%";
-//                 n += 2;
-                
-//             }else{
-//                 n =1;
-//             }
-//         },1000)
-//         setInterval(function(){
-//             setTimeout(function(){
-//             if (b <= o.childElementCount*2){
-//                 o.childNodes[b].style.opacity = "0.4";
-//                 o.childNodes[b].style.height = "100%";
-//                 b += 2;
-//             }else{
-//                 b =1;
-//             }
-//             },1000)
-//         },1000);
-//     })
-
-// }

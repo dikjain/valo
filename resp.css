@@ -1,8 +1,12 @@
+
 @media screen and  (max-width : 1095px) {
     #jettfr{
         top: 0px;
         height: 100%;
         left: -50px;
+    }
+    #logo img{
+        width: 80%;
     }
     #in-2m{
         flex-wrap: wrap;
@@ -26,6 +30,8 @@
     }
     .map-pics{
         height: 90%;
+        opacity: 1;
+        box-shadow: 0vw 0vw 6px #ff4753;
     }
     #in-2R:hover,#in-2L:hover{
         width: 100%;
@@ -45,6 +51,70 @@
         width: 25vw;
     }
     #sctop,#sctbt{
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
+}
+@media screen and  (max-width : 780px) {
+    .social{
+        top: 70px;
+        height: 30vh;
+        width: 23vw;
+    }
+    #jettfr{
+        height: 90vw;
+        z-index: -1;
+        top: -200px;
+    }
+    #b1-m{
+        font-size: 9vw;
+        height: 43%;
+    }
+    #b1-t{
+        font-size: 2vw;
+    }
+    #in-1{
+        height: 32vw;
+        width: 60vw;
+    }
+    #in-1b{
+        width: 100%;
+        height: 100%;
+    }
+    #in-1a{
+        height: 0PX;
+        width: 0px;
+    }
+    .char-img{
+        height: 90%;
+    }
+    #sctop,#sctbt{
+        flex-wrap: nowrap;
+    }
+}
+@media screen and  (max-width : 620px) {
+    @keyframes valogshift {
+        from{
+            left: 0vw;
+        }
+        to{
+            left: 65vw;
+
+        }
+    }
+    @keyframes ktg{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 26%;
+        }
+    }
+    #jettfr{
+        height: 110vw;
+        transform: translateX(0px);
+    }
+    #pg-1{
+        overflow: hidden;
+    }
+
 }

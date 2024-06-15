@@ -19,43 +19,87 @@ let tplist = document.querySelectorAll("#gtlist");
 let frwd = document.querySelectorAll("#fimg");
 let bckd = document.querySelectorAll("#fbck");
 let imggs = document.querySelector("#jettfr");
+let alll = document.querySelector("a");
 
+// char swap index page
 setTimeout(function(){
     imggs.style.left = "-750px";
 },4500)
 setTimeout(function(){
     imggs.style.left = "-750px";
-},9500)
+    },9500)
 setTimeout(function(){
     imggs.style.left = "-750px";
-},14000)
+    },14000)
 setTimeout(function(){
     imggs.style.left = "-750px";
-},19500)
+    },19500)
 setTimeout(function(){
     imggs.src = "ASSETS\\PHNX.png"
     imggs.style.left = "100px";
-},5000)
+    },5000)
 setTimeout(function(){
     imggs.src = "ASSETS\\VP.png"
     imggs.style.left = "100px";
-},10000)
-setTimeout(function(){
+    },10000)
+    setTimeout(function(){
     imggs.src = "ASSETS\\cypher.png"
     imggs.style.left = "100px";
 },15000)
 setTimeout(function(){
     imggs.src = "ASSETS\\jett.png"
     imggs.style.left = "0px";
-},20000)
+    },20000)
+// char swap index page
+const mediaQueryList = window.matchMedia("(max-width: 780px)");
+function handleMediaChange(event) {
+    if (event.matches) {
+        setTimeout(function(){
+            imggs.style.left = "-750px";
+        },4500)
+        setTimeout(function(){
+            imggs.style.left = "-750px";
+        },9500)
+        setTimeout(function(){
+            imggs.style.left = "-750px";
+        },14000)
+        setTimeout(function(){
+            imggs.style.left = "-750px";
+        },19500)
+        setTimeout(function(){
+            imggs.src = "ASSETS\\PHNX.png"
+            imggs.style.left = "-20px";
+        },5000)
+        setTimeout(function(){
+            imggs.src = "ASSETS\\VP.png"
+            imggs.style.left = "-20px";
+        },10000)
+        setTimeout(function(){
+            imggs.src = "ASSETS\\cypher.png"
+            imggs.style.left = "-20px";
+        },15000)
+        setTimeout(function(){
+            imggs.src = "ASSETS\\jett.png"
+            imggs.style.left = "-50px";
+        },20000)
+        // char swap index page
+        }
+    }
+handleMediaChange(mediaQueryList);
+mediaQueryList.addEventListener('change', handleMediaChange);
 
+
+// agnets page cursor
 bcurbg.addEventListener("mousemove",function(dets){
     bcur.style.left = dets.pageX + "px";
     bcur.style.top = dets.pageY + "px";
     bcur.style.display = "block";
     bcurbg.style.cursor = "none"
 })
+// agnets page cursor
 
+
+// guns page frwd and bckwrd btn
 var m = 1
 frwd[0].addEventListener("click",function(){
     if(m<=5){
@@ -110,7 +154,8 @@ bckd[1].addEventListener("click",function(){
             m -= 2;
         },10);
 
-    })
+})
+// guns page frwd and bckwrd btn
 
 
 setTimeout(function(){
@@ -123,16 +168,16 @@ tplist.forEach(lit=>{
     lit.addEventListener("click",function(){
         switch(lit.value){
             case 1:
-                bhaalu(0);
+                  bhaalu(0);
                 break
             case 2:
-                bhaalu(1);
+                  bhaalu(1);
                 break
                 case 3:
-                    bhaalu(2);
-                    break
-                    case 4:
-                        bhaalu(3);
+                bhaalu(2);
+                break
+                case 4:
+                    bhaalu(3);
                 break
                 case 5:
                     bhaalu(4);
@@ -140,9 +185,9 @@ tplist.forEach(lit=>{
                 case 6:
                     bhaalu(5);
                     break
-                    case 7:
-                        bhaalu(6);
-                        break
+                case 7:
+                    bhaalu(6);
+                    break
                     }
                 })
     })

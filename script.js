@@ -13,13 +13,25 @@ let bcurbg = document.querySelector("body");
 let chtd = document.querySelector("#chtd");
 let gunch = document.querySelectorAll(".guns");
 let sld = document.querySelectorAll(".gnslid");
-let socin = document.querySelectorAll("#socin");
-let social = document.querySelectorAll(".social");
 let tplist = document.querySelectorAll("#gtlist");
 let frwd = document.querySelectorAll("#fimg");
 let bckd = document.querySelectorAll("#fbck");
 let imggs = document.querySelector("#jettfr");
 let alll = document.querySelector("a");
+let men = document.querySelector("#menbtn");
+let nnav = document.querySelector("#respnav");
+let nnuunn = 0;
+
+men.addEventListener("click",function(){
+    if (nnuunn == 0){
+        nnav.style.display = "flex";
+        nnuunn = 1;
+    }else{
+        nnav.style.display = "none";
+        nnuunn = 0;
+    }
+})
+
 
 // char swap index page
 setTimeout(function(){

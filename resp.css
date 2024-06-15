@@ -49,9 +49,7 @@
     .social{
         height: 40vh;
         width: 25vw;
-    }
-    #sctop,#sctbt{
-        /* flex-wrap: wrap; */
+        margin-left: 10px;
     }
 }
 @media screen and  (max-width : 780px) {
@@ -87,9 +85,6 @@
     .char-img{
         height: 90%;
     }
-    #sctop,#sctbt{
-        flex-wrap: nowrap;
-    }
 }
 @media screen and  (max-width : 620px) {
     @keyframes valogshift {
@@ -110,11 +105,114 @@
         }
     }
     #jettfr{
-        height: 110vw;
-        transform: translateX(0px);
+        height: 70vh;
+        transform: translateX(-60px);
     }
     #pg-1{
         overflow: hidden;
     }
-
+    #sctop{
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    #sctbtm{
+        display: none;
+    }
+    .social{
+        top: 10px;
+        width: 45vw;
+    }
+    #ost{
+        /* font-size: 5vh; */
+        width: 15vw;
+    }
+    #socin img{
+        width: 35%;
+    }
+    .sclbtn{
+        transform: translateY(75px) translateX(-250px);
+    }
+    .social:hover{
+        height: 1000px;
+        .sclbtn{
+            font-size: 5vw;
+            height: 40px;
+            width: 70%;
+            transform: translateY(75px) translateX(0px);
+        }
+        #socin img{
+            width: 50%;
+            top: -40px;
+            transition: all ease-out 0.2s;
+        }
+    }
+    #respnav{
+        position: relative;
+        top: 50px;
+        left: -3px;
+        width: 28vw;
+        height: 300px;
+        background-color: black;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    #respnav ul{
+        position: relative;
+        z-index: 500;
+        color: black;
+    }
+    #nl{
+        display: none;
+    }
+    #rnl{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #rnl li{
+        border: #ff4753 2px solid;
+        width: 100%;
+        list-style: none;
+        font-weight: 700;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 3.5vw;
+        transition: ease-in-out 0.15s;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+    #link-main1{
+        font-size: 3.5vw;
+    }
+    .rnavs{
+        color: white;
+        height: 25%;
+    }
+    #rnl li a:hover{
+        color: #ff4753;
+        transition: ease-in-out 0.15s;
+        font-size: 1.5vw;
+        text-decoration: underline #ff4753;
+    }
+    #navlist{
+        width: 30vw;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+    #logo{
+        width: 70vw;
+    }
+    #logo img{
+        width: 100%;
+        
+    }
 }

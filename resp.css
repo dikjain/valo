@@ -212,7 +212,9 @@
         width: 70vw;
     }
     #logo img{
-        width: 100%;
-        
+        width: 100%;       
+    }
+    #menbtn{
+        display: block;
     }
 }

@@ -51,8 +51,25 @@
         width: 25vw;
         margin-left: 10px;
     }
+    .chrnm{
+        font-size: 100px;
+    }
+    .charsimg{
+        top: -60px;
+        height: 145%;
+    }
 }
 @media screen and  (max-width : 780px) {
+    .charcls{
+        height: 18vh;
+    }
+    .chrnm{
+        font-size: 70px;
+    }
+    .charsimg{
+        top: -80px;
+        height: 165%;
+    }
     .social{
         top: 70px;
         height: 30vh;
@@ -87,6 +104,19 @@
     }
 }
 @media screen and  (max-width : 620px) {
+    #space{
+        height: 8vh;
+    }
+    .charcls{
+        height: 18vh;
+    }
+    .chrnm{
+        font-size: 10vw;
+    }
+    .charsimg{
+        top: -60px;
+        height: 50vw;
+    }
     @keyframes valogshift {
         from{
             left: 0vw;
@@ -216,5 +246,25 @@
     }
     #menbtn{
         display: block;
+    }
+    #lorem{
+        font-size: 1px;
+    }
+    #ag_pg_1{
+        height: 480vh;
+    }
+    .charcls:hover{
+        background-color: #2A0045;
+        .chrnm{
+            display: none;
+        }
+        cursor: none;
+        height: 23vh;
+        #lorem{
+            font-size: 2.3vw;
+        }
+        .charsimg{
+            top: -10px;
+        }   
     }
 }

@@ -139,7 +139,7 @@ nav{
 }
 .navs{
     color: white;
-
+    cursor: none;
 }
 #nl li a:hover{
     color: #ff4753;
@@ -626,7 +626,6 @@ h1::before{
     width: 100%;
     color: black;
     text-shadow: 3px 3px 5px white;
-
 }
 .charsimg{
     position: relative;

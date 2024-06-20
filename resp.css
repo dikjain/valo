@@ -1,5 +1,20 @@
 
 @media screen and  (max-width : 1095px) {
+    #nodisp{
+        /* position: absolute; */
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #nodisp img{
+        width: 50vw;
+    }
+    #gn_pg-1{
+        display: none;
+    }
     #jettfr{
         top: 0px;
         height: 100%;
@@ -104,6 +119,9 @@
     }
 }
 @media screen and  (max-width : 620px) {
+    #ballcur{
+        opacity: 0;
+    }
     #space{
         height: 8vh;
     }

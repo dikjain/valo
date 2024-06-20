@@ -6,7 +6,9 @@
     
 }
 
-
+#nodisp{
+    display: none;
+}
 .gns::-webkit-scrollbar{
     display: none;
 }
@@ -34,7 +36,7 @@
 }
 
 #guntyp ul li a{
-    font-size: 40px;
+    font-size: 2.5vw;
     list-style: none;
     color: white;
     cursor: pointer;
@@ -83,12 +85,15 @@
 #gun1 img,#gun3 img{
     width: 23vw;
 }
+#gun1 #clickhere,#gun3 #clickhere{
+    transform: translateX(5vw);
+}
 
 #gntop{
     display: flex;
     align-items: end;
-    height: 25%;
-    font-size: 87px;
+    height: 5.6vw;
+    font-size: 5vw;
     font-family: fantasy;
     color: white;
     transition: 0.3s ease-in-out;
@@ -125,14 +130,15 @@
 #fimg{
     position: relative;
     cursor: pointer;
-    left: 90vw;
+    transform: translateX(95vw);
     height: 50px;
     width: 50px;
     border-radius: 50%;
     border: 1px white inset;
     box-shadow: 1px 1px 5px white;
-    top: 30px;
+    top: 1vw;
     z-index: 40;
+    right: 3vw;
 }
 #fimg:hover{
     background-color: red;
@@ -143,15 +149,16 @@
     transition: 0.2s all ease-in-out;
 }
 #fbck{
+    right: 13vw;
+    transform: translateX(95vw);
     position: relative;
     cursor: pointer;
-    left: 83vw;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     border: 1px white inset;
     box-shadow: 1px 1px 5px white;
-    top: 30px;
+    top: 1vw;
     z-index: 40;
 }
 .namtop,#gnslid1{

@@ -821,7 +821,7 @@ h1::before{
     font-weight: 800;
     font-size: 30px;
     position: relative;
-    left: 70vw;
+    left: 50vw;
     top: 20px;
     -webkit-filter: drop-shadow(2px 2px 2px black);
     cursor: pointer;
@@ -948,5 +948,6 @@ h1::before{
   'opsz' 24
 }
 #menbtn{
+    left: 70vw;
     display: none;
 }
